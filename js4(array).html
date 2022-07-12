@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title> YunusEmreKaplan </title>
+    <style type="text/css">
+    
+    </style>
+    <script type="text/javascript">
+
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        var alınanDersler = new Array ("XHTML", "JS");
+        var alınacakDersler = new Array ("HTML5", "MySQL");
+        document.write("Alınan Dersler<br/><br/>");
+        //document.write("<hr/>");
+        for(var i=0; i<alınanDersler.length; i++) {
+            document.write(alınanDersler[i]+"<br/>");
+        }
+        document.write("<hr/>");
+        document.write("Alınacak Dersler<br/><br/>");
+        //document.write("<hr/>");
+        for(var j=0; j<alınacakDersler.length; j++) {
+            document.write(alınacakDersler[j]+"<br/>");
+        }
+        // Join metodu diziyi yazdırır.
+        document.write("<hr/>");
+        document.write("Alınan Dersler<br/><br/>");
+        document.write(alınanDersler.join());
+        document.write("<hr/>");
+        document.write("Alınacak Dersler<br/><br/>");
+        document.write(alınacakDersler.join());
+        document.write("<hr/>");
+        // Concat metodu iki diziyi birleştirir.
+        var dersler = new Array;
+        dersler = alınacakDersler.concat(alınanDersler);
+        document.write(dersler.join());
+        document.write("<hr/>");
+        // Revers metodu diziyi ters çeviri.
+        var tersDersler = new Array;
+        tersDersler = dersler.reverse();
+        document.write(tersDersler.join());
+    </script>
+</body>
+</html>

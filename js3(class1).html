@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title> YunusEmreKaplan </title>
+    <style type="text/css">
+    </style>
+    <!-- Class tanımlamaları head tag'i içerisinde yapılır.-->
+    <script type="text/javascript">
+        function ders(isim, kod, hoca, tarih) {
+            this.isim=isim;
+            this.kod=kod;
+            this.hoca=hoca;
+            this.tarih=tarih;
+            this.kacSene=kacSene;
+        }
+        function kacSene() {
+            var x = 2022 - this.tarih;
+            return x;
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        var ders1 = new ders("JavaScript", 101, "Yunus", 2019);
+        document.write("Kac sene: " + ders1.kacSene());
+        document.write("<hr/>");
+    </script>
+<p> YunusEmreKaplan </p>
+</body>
+</html>
