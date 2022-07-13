@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title> ClassCalismasi </title>
+    <style type="text/css">
+    </style>
+    <script type="text/javascript">
+        function ulke(isim, nufus, kod) {
+            this.isim = isim;
+            this.nufus = nufus;
+            this.kod = kod;
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        var ulke1 = new ulke("Turkiye", 88000000, 90);
+        document.write(ulke1.isim+ "<hr/>");
+        // Sınıf türünde liste.
+        var ulkeler = new Array(ulke);
+        ulkeler[0].isim = "Almanya";
+        ulkeler[0].nufus = 55000000;
+        ulkeler[0].kod = 27;
+        document.write(ulkeler[0].isim +" "+ ulkeler[0].nufus +" "+ ulkeler[0].kod);
+    </script>
+</body>
+</html>

@@ -23,7 +23,8 @@
         for(var j=0; j<alınacakDersler.length; j++) {
             document.write(alınacakDersler[j]+"<br/>");
         }
-        // Join metodu diziyi yazdırır.
+        
+        // Join methodu diziyi yazdırır. Paranteze bir şey yazılmaz ise virgül ile ayırır.
         document.write("<hr/>");
         document.write("Alınan Dersler<br/><br/>");
         document.write(alınanDersler.join());
@@ -31,15 +32,62 @@
         document.write("Alınacak Dersler<br/><br/>");
         document.write(alınacakDersler.join());
         document.write("<hr/>");
-        // Concat metodu iki diziyi birleştirir.
-        var dersler = new Array;
+        
+        // Concat methodu iki diziyi birleştirir.
+        var dersler = new Array();
         dersler = alınacakDersler.concat(alınanDersler);
         document.write(dersler.join());
         document.write("<hr/>");
-        // Revers metodu diziyi ters çeviri.
-        var tersDersler = new Array;
+        
+        // Revers methodu diziyi ters çeviri.
+        var tersDersler = new Array();
         tersDersler = dersler.reverse();
         document.write(tersDersler.join());
+        document.write("<hr/>");
+        
+        //Sort methodu diziyi sıralar.
+        document.write("Sirali dizi<br/><br/>");
+        var siraliDersler = dersler.sort();
+        document.write(siraliDersler.join());
+        document.write("<hr/>");
+        
+        // Pop methodu dizinin sonundan, shiht methodu ise başından bir eleman siler.
+        siraliDersler.pop();
+        siraliDersler.shift();
+        document.write(siraliDersler.join());
+        document.write("<hr/>");
+
+        //Push methodu dizinin sonuna eleman ekler.
+        siraliDersler.push("C#", "C/C++", "PYTHON");
+        document.write(siraliDersler.join());
+        document.write("<hr/>");
+
+        //Unshift methodu dizinin başına eleman ekler.
+        siraliDersler.unshift("PHP", ".Net");
+        document.write(siraliDersler.join()+ "<hr/>");
+        
+        //Splice methodu diziden eleman siler veya hem siler hem ekler.
+        siraliDersler.splice(0, 2);
+        document.write(siraliDersler.join()+ "<hr/>");
+        siraliDersler.unshift("PHP", ".Net");
+        document.write(siraliDersler.join()+ "<hr/>");
+        siraliDersler.splice(0, 2, "Java", "Kotlin");
+        document.write(siraliDersler.join()+ "<hr/>");
+        
+        //indexof methodu elemanın index konumunu verir. Eğer elemandan birden fazla varsa dizide elemanın karşılaştığı ilk indexin numarasını verir.
+        siraliDersler.unshift("JS");
+        document.write(siraliDersler.join(" ")+ "<hr/>");
+        document.write(siraliDersler.indexOf("JS")+ "<hr/>");
+
+        //
+        document.write("Notlar<br/><br/>");
+        var notlar = new Array(80,45,21,34,55);
+        document.write(notlar.join()+"<br/>");
+        var sum = 0;
+        for(var i=0; i<notlar.length; i++) {
+            sum += notlar[i];
+        }
+        document.write("Notlarin toplami: "+sum);
     </script>
 </body>
 </html>
